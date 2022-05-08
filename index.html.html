@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тема9 Завдання5</title>
+    <link rel="stylesheet" href="style9_5.css">
+
+    <script>
+        function checkFields() {
+            if (document.getElementById("UN").value == "" || document.getElementById("pwd").value == "")
+                document.getElementById("send").disabled = true;
+            else
+                document.getElementById("send").disabled = false;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        <h1 title="f1">Реєстрація</h1>
+        <br>
+        <div class="group">
+            <label for=""> Введіть ім`я:</label>
+            <input onkeypress="checkFields()" type="text" id="UN" placeholder="Прізвище Ім`я">
+        </div>
+        <div class="group">
+            <label for=""> Введіть пароль:</label>
+            <input onkeypress="checkFields()" type="password" id="pwd">
+        </div>
+        <div class="group">
+            <br> <br>
+            <input type="submit" id="send" value="Send" disabled>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
